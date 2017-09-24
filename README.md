@@ -9,7 +9,7 @@ I am going to share some small scripts I use in my daily life. Scripts like giox
 You need to change the profile path in giox.py to use giox                                                                          
 You need to change the paths in the variable section in bgchanger to use bgchanger                                                  
                                                                                                                                                                                                                                                                    
-NOTE: bgchanger is designed to work at boot and keep working until computer turns off. so you can make it a start-up application.
+NOTE: bgchanger is designed to work at boot and keep working until computer turns off. so you can make it a start-up application.                                                 
 NOTE: put your day/night wallpapers in the folders you specified in bgchanger 
                                                                                                                                     
 # CONTACT
