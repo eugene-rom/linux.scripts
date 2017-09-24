@@ -1,3 +1,5 @@
+# THIS CODE BELONGS TO PETER NORVIG. ORIGINAL CODE CAN BE FOUND AT: http://norvig.com/spell-correct.html
+
 import re
 from collections import Counter
 import argparse
