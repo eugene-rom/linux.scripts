@@ -1,0 +1,7 @@
+#linux apps
+ffmpeg
+
+#python libraries
+pydub
+pafy
+youtube-dl

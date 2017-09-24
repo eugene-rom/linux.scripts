@@ -1,0 +1,64 @@
+#!/bin/bash
+
+while true
+do
+
+	#variables
+	logpath='/home/USERNAME/.local/share/bkscripts/bglog'
+	daypath='/home/USERNAME/.local/share/bkscripts/daywp'
+	nightpath='/home/USERNAME/.local/share/bkscripts/nightwp'
+
+	#setting the mode
+	if [ $(date +%H) -lt 20 ] && [ $(date +%H) -gt 7 ]; then
+	    mode="DAY"
+	else
+	    mode="NIGHT"
+	fi
+
+	#searching for log file
+	if [ ! -e $logpath ]; then
+
+	    logfolder=$(echo $logpath | cut -d'/' -f1-6)
+	    
+	    if [ -d $logfolder ]
+	    then
+		touch $logpath
+	    else
+		mkdir $logfolder; touch $logpath
+	    fi
+	else
+	    continue
+	fi
+
+	#reading the log file
+	if [ $(cat $logpath | wc -l) -gt 1 ] || [ $(cat $logpath | wc -l) -eq 1 ]; then
+	    lastlog=$(cat $logpath | tail -n1)
+	else
+	    lastlog='none'
+	fi
+
+	#wallpaper changer
+	function change {
+		if [ "$mode" == "NIGHT" ]; then
+		    imagepath=$nightpath/$(ls $nightpath | shuf -n 1)
+		else
+		    imagepath=$daypath/$(ls $daypath | shuf -n 1)
+		fi
+
+		gsettings set org.gnome.desktop.background picture-uri $imagepath; }
+		echo "$(date +%D-%H.%M)|$mode" >> $logpath
+
+	#checking the last log
+	if [ "$lastlog" == 'none' ]; then
+	    change
+	else
+	    if [ $(echo $lastlog | cut -d'/' -f2) == $(date +%d) ] && [ $(echo $lastlog | cut -d'|' -f2) == $mode ]; then
+		continue
+	    else
+		change
+	    fi
+	fi
+
+	sleep 15m
+
+done
