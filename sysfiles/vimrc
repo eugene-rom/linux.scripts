@@ -1,0 +1,107 @@
+" enable syntax highlighting
+syntax enable
+
+" show line numbers
+set number
+
+" set tabs to have 4 spaces
+set ts=4
+
+" indent when moving to the next line while writing code
+set autoindent
+
+" expand tabs into spaces
+set expandtab
+
+" when using the >> or << commands, shift lines by 4 spaces
+set shiftwidth=4
+
+" show the matching part of the pair for [] {} and ()
+set showmatch
+
+" enable all Python syntax highlighting features
+let python_highlight_all = 1
+
+" number of visual spacer per TAB
+set tabstop=4
+
+" number of spaces in tab when editing
+set softtabstop=4
+
+" show command at the bottom bar
+set showcmd
+
+" visual autocomplete for command menu
+set wildmenu
+
+" highlight matching [{()}]
+set showmatch
+
+" search as characters are entered
+set incsearch         
+
+" highlight matches
+set hlsearch            
+
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR> 
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
+
+" docstrings of folded code
+let g:SimpylFold_docstring_preview=1
+
+"utf8 support
+set encoding=utf-8
+
+" The line below ensures that the autocomplete window goes away when you’re done with it, 
+" and the latter defines a shortcut for goto definition.
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"making look code pretty
+syntax on
+
+"ignore files in NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$'] 
+
+"use the system clipboard
+set clipboard=glipper
+
+" =============== VUNDLE STUFF ================
+set nocompatible              " required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+Plugin 'tmhedberg/SimpylFold'                "for folding
+Plugin 'vim-scripts/indentpython.vim'	     "indenting
+Plugin 'scrooloose/syntastic'		         "syntax checker
+Plugin 'scrooloose/nerdtree'		         "file tree
+Plugin 'kien/ctrlp.vim'			             "searching
+Plugin 'Valloric/YouCompleteMe'              "auto-completion
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+"http://vimcolors.com/83/mac_classic/light
+colorscheme badwolf
