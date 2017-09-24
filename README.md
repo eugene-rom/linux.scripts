@@ -15,6 +15,9 @@ You need to change the paths in the variable section in bgchanger to use bgchang
 NOTE: bgchanger is designed to work at boot and keep working until computer turns off. so you can make it a startup application.       
 NOTE: pytranslator is designed to work at boot and keep working until computer turns off. so you can make it a startup application.                                   
 NOTE: put your day/night wallpapers in the folders you specified in bgchanger 
-                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+# BIGGEST NOTE:
+bgchanger and pytranslator only works under Gnome3.
+                                                                                                                                                                                                                                                                                      
 # CONTACT
 berkkuzgil@protonmail.com
