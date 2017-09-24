@@ -2,6 +2,8 @@
 I am going to share some small scripts I use in my daily life.
 
 # What can be found in this repository?
+==[ BASHRC: a function to check a text file for duplicates and clean them. a function to create a folder and get into it. a function to get into the last edited folder inside a folder.                                                                                                            
+==[ VIMRC: nothing recommended. just my personal settings.                                                                                                
 ==[ GIOXpy: a script that can download the currently opened YouTube page as mp3/mp4. script also works with a given YouTube link.           
 ==[ bgchanger: this script changes the wallpaper when we enter a new period of day -day/night-                                                    
 ==[ syntaxchecker: this script can be used to check a word to see if we wrote it correct or not. (This code belongs to Peter Norvig. I just added some lines of code to make it usable in daily life. I don't own anything about this code.)                                                    
