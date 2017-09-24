@@ -13,7 +13,7 @@ You need to change the profile path in giox.py to use giox
 You need to change the paths in the variable section in bgchanger to use bgchanger                                                  
                                                                                                                                                                                                                                                                    
 NOTE: bgchanger is designed to work at boot and keep working until computer turns off. so you can make it a startup application.       
-NOTE: pytranslator is designed to work at boot and keep working until computer turns off. so you can make it a startup application.
+NOTE: pytranslator is designed to work at boot and keep working until computer turns off. so you can make it a startup application.                                   
 NOTE: put your day/night wallpapers in the folders you specified in bgchanger 
                                                                                                                                     
 # CONTACT
