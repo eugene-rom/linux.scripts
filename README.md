@@ -18,11 +18,11 @@ I am going to share some small scripts/config files I use in my daily life.
 * BGCHANGER
   - this script changes the wallpaper when we enter a new period of day(night/day). so you can have a dark wallpaper at night while having Mt.Everest wallpaper at day.
 * TRANSLATOR
-  - this script translates everything you copied after you pressed \` key. it translates to Turkish by default but it can be changed very easily. uses notify-send to show the translated version of word.
+  - this script translates everything you copied after pressing \` key. it translates to Turkish by default but it can be changed very easily. uses notify-send to show the translated version of word.
 * GIOX
   - this script downloads the currently opened YouTube page. its great when you get bored of Ctrl+C,Ctrl+V to download YouTube videos. script also works with a given YouTube link too. script saves the mp4 files to ~/Videos and mp3 files ~/Music but this can be changed with `giox -musicpath/-videopath`.
   - usage1: download the currently opened YouTube page as mp3. `giox -mp3 -ytc`
-  - usage2: download the given link as mp4. `giox -mp3 -yt <LINK>`
+  - usage2: download the given link as mp4. `giox -mp4 -yt <LINK>`
   - usage3: download the given link as mp4+mp3. `giox -both -yt <LINK>`
 * SYNTAXCHECK
   - this script finds the true writing of a word. this code belongs to Peter Nolvig. i just added sys.argv
