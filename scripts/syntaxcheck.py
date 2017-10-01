@@ -1,19 +1,11 @@
 # THIS CODE BELONGS TO PETER NORVIG. ORIGINAL CODE CAN BE FOUND AT: http://norvig.com/spell-correct.html
 
-import re
+import re, sys
 from collections import Counter
-import argparse
-
-parser=argparse.ArgumentParser()
-parser.add_argument('-w',help='word to check')
-parser=parser.parse_args()
 
 def words(text): return re.findall(r'\w+', text.lower())
 
-try :
-    WORDS = Counter(words(open('/usr/share/dict/words').read()))
-except:
-    print('[-] can\'t read /usr/share/dict/words. try changing dict path in code.')
+WORDS = Counter(words(open('/usr/share/dict/words').read()))
 
 def P(word, N=sum(WORDS.values())):
     "Probability of `word`."
@@ -45,4 +37,4 @@ def edits2(word):
     "All edits that are two edits away from `word`."
     return (e2 for e1 in edits1(word) for e2 in edits1(e1))
 
-print(correction(parser.w))
+print(correction(sys.argv[1]))
