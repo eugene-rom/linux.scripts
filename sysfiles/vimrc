@@ -74,9 +74,6 @@ syntax on
 "ignore files in NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$'] 
 
-"use the system clipboard
-set clipboard=glipper
-
 " =============== VUNDLE STUFF ================
 set nocompatible              " required
 filetype off                  " required
