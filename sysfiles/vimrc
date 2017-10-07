@@ -1,107 +1,76 @@
-" enable syntax highlighting
+"some basic configuration
+set number
+set ts=4
+set autoindent
+set expandtab
+set showmatch
+set tabstop=4
+set softtabstop=4
+set showcmd
+set wildmenu
+set showmatch
+set incsearch
+set hlsearch
+set foldmethod=indent
+set foldlevel=99
+set rtp+=~/.vim/bundle/Vundle.vim
+set nocompatible
+set encoding=utf-8
+
+let python_highlight_all = 1
 syntax enable
 
-" show line numbers
-set number
-
-" set tabs to have 4 spaces
-set ts=4
-
-" indent when moving to the next line while writing code
-set autoindent
-
-" expand tabs into spaces
-set expandtab
-
-" when using the >> or << commands, shift lines by 4 spaces
-set shiftwidth=4
-
-" show the matching part of the pair for [] {} and ()
-set showmatch
-
-" enable all Python syntax highlighting features
-let python_highlight_all = 1
-
-" number of visual spacer per TAB
-set tabstop=4
-
-" number of spaces in tab when editing
-set softtabstop=4
-
-" show command at the bottom bar
-set showcmd
-
-" visual autocomplete for command menu
-set wildmenu
-
-" highlight matching [{()}]
-set showmatch
-
-" search as characters are entered
-set incsearch
-
-" highlight matches
-set hlsearch
-
-" turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
-
-"split navigations
+"key mappings
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Enable folding
-set foldmethod=indent
-set foldlevel=99
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+"enable folding
 nnoremap <space> za
-
-" docstrings of folded code
-let g:SimpylFold_docstring_preview=1
-
-"utf8 support
-set encoding=utf-8
-
-" The line below ensures that the autocomplete window goes away when you’re done with it,
-" and the latter defines a shortcut for goto definition.
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
-"making look code pretty
-syntax on
-
-"ignore files in NERDTree
-let NERDTreeIgnore=['\.pyc$', '\~$']
 
 " Remove all trailing whitespace by pressing F4
 noremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
-" ########### Vundle settings ##############
-set nocompatible              " required
-filetype off                  " required
+" docstrings of folded code
+let g:SimpylFold_docstring_preview=1
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
-Plugin 'tmhedberg/SimpylFold'                "for folding
-Plugin 'vim-scripts/indentpython.vim'	     "indenting
-Plugin 'scrooloose/syntastic'		         "syntax checker
-Plugin 'scrooloose/nerdtree'		         "file tree
-Plugin 'kien/ctrlp.vim'			             "searching
-Plugin 'Valloric/YouCompleteMe'              "auto-completion
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+" close autocompleteme window
+let g:ycm_autoclose_preview_window_after_completion=1
 
 "https://github.com/sjl/badwolf
 colorscheme badwolf
+
+"close nerdtree after opening a file
+let NERDTreeQuitOnOpen = 1
+
+"nerdtree shortcut
+map <silent> <C-n> :NERDTreeToggle<CR>
+
+"to prevent clash with youcompleteme, change snippet trigger
+imap <C-F> <esc>a<Plug>snipMateNextOrTrigger
+smap <C-F> <Plug>snipMateNextOrTrigger
+
+" Vundle settings
+call vundle#begin()
+filetype off
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tmhedberg/SimpylFold'               "for folding
+Plugin 'vim-scripts/indentpython.vim'	    "indenting
+Plugin 'scrooloose/syntastic'		        "syntax checker
+Plugin 'scrooloose/nerdtree'		        "file tree
+Plugin 'kien/ctrlp.vim'		   	            "searching
+Plugin 'Valloric/YouCompleteMe'             "auto-completion
+Plugin 'tpope/vim-surround'                 "editing brackets <cs{[ ysiw'>
+Plugin 'MarcWeber/vim-addon-mw-utils'       "vim snipmate dependency
+Plugin 'tomtom/tlib_vim'                    "vim snipmate dependency
+Plugin 'garbas/vim-snipmate'                "enables snippets
+Plugin 'pangloss/vim-javascript'            "javascript indentation&syntax support
+Plugin 'Xuyuanp/nerdtree-git-plugin'  "what you have edited since last commit
+
+call vundle#end()
+filetype plugin indent on
