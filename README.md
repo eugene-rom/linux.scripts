@@ -7,7 +7,7 @@ I am going to share some small scripts/config files I use in my daily life.
   - lastedited function:  gets into the last edited folder inside a folder.
   - checktext function :  checks a text for duplicates and clears them after backing up the original file.
   - scripts function   :  gets into ~/Documents/script/[$1 if specified]
-  - =========================================================================================
+  - --------------------------
   - changes the terminal title to USERNAME@HOSTNAME: PWD when there isn't any commands running.
   - changes the terminal title to PWD:{COMMAND} when there is a command running.
   - PS1= user@host: PWD$
@@ -33,10 +33,8 @@ I am going to share some small scripts/config files I use in my daily life.
 You need to change the profile path in giox.py to use giox                                                                          
 You need to change the paths in the variable section in bgchanger to use bgchanger                                                  
                                                                                                                                                                                                                                                                    
-NOTE: bgchanger is designed to work at boot and keep working until computer turns off. so you can make it a startup application.       
-NOTE: pytranslator is designed to work at boot and keep working until computer turns off. so you can make it a startup application.                                   
-NOTE: put your day/night wallpapers in the folders you specified in bgchanger 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                
+NOTE: bgchanger&translator is designed to work at boot and keep working until computer turns off. so you can make them a startup application.                                      
+
 # BIGGEST NOTE:
 bgchanger and pytranslator only works under Gnome3.
                                                                                                                                                                                                                                                                                       
