@@ -38,13 +38,13 @@ set wildmenu
 set showmatch
 
 " search as characters are entered
-set incsearch         
+set incsearch
 
 " highlight matches
-set hlsearch            
+set hlsearch
 
 " turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR> 
+nnoremap <leader><space> :nohlsearch<CR>
 
 "split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -63,7 +63,7 @@ let g:SimpylFold_docstring_preview=1
 "utf8 support
 set encoding=utf-8
 
-" The line below ensures that the autocomplete window goes away when you’re done with it, 
+" The line below ensures that the autocomplete window goes away when you’re done with it,
 " and the latter defines a shortcut for goto definition.
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -72,9 +72,12 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 syntax on
 
 "ignore files in NERDTree
-let NERDTreeIgnore=['\.pyc$', '\~$'] 
+let NERDTreeIgnore=['\.pyc$', '\~$']
 
-" =============== VUNDLE STUFF ================
+" Remove all trailing whitespace by pressing F4
+noremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+" ########### Vundle settings ##############
 set nocompatible              " required
 filetype off                  " required
 
@@ -100,5 +103,5 @@ Plugin 'Valloric/YouCompleteMe'              "auto-completion
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-"http://vimcolors.com/83/mac_classic/light
+"https://github.com/sjl/badwolf
 colorscheme badwolf

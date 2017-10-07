@@ -26,7 +26,7 @@ function checktext {
     fi
 }
 
-#gets into the ~/Documents/scripts if $1 is not specified. if $1 specified gets into the scripts/$1
+#gets into the ~/Documents/scripts/[$1 if specified]
 function scripts {
     cd ~/Documents/scripts
     if [ ! -z $1 ]; then
@@ -38,6 +38,8 @@ alias coding='lastedited ~/Documents/coding'
 alias giox='python3 ~/Documents/scripts/giox/giox.py'
 alias bkscr='cd ~/.local/share/bkscripts'
 alias syntaxcheck='python3 ~/Documents/scripts/syntaxcheck.py'
+alias docs='lastedited ~/Documents'
+alias mdreader='~/Documents/scripts/mdreader'
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
