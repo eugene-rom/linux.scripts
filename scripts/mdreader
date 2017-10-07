@@ -1,0 +1,17 @@
+#!/bin/bash
+
+IFS=$'\n'; set -f
+
+for line in $(cat $1); do
+    if [[ $line == '#'* ]]; then 
+        echo -e "\033[1m\033[31m$line\033[0m"
+    elif [[ $line == '*'* ]]; then
+        echo -e "\033[1m\033[32m$line\033[0m"
+    elif [[ $line == '*****' ]]; then
+        echo -e "==================================================================="
+    elif [[ $line == '*'*'*' ]]; then
+        echo -e "\033[1m\033[36m$line\033[0m"
+    else
+        echo $line
+    fi
+done
