@@ -38,8 +38,7 @@ alias coding='lastedited ~/Documents/coding'
 alias giox='python3 ~/Documents/scripts/giox/giox.py'
 alias bkscr='cd ~/.local/share/bkscripts'
 alias syntaxcheck='python3 ~/Documents/scripts/syntaxcheck.py'
-alias docs='lastedited ~/Documents'
-alias mdreader='~/Documents/scripts/mdreader'
+alias docs='cd ~/Documents'
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
