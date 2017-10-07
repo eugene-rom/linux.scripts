@@ -26,6 +26,8 @@ I am going to share some small scripts/config files I use in my daily life.
   - usage3: download the given link as mp4+mp3. `giox -both -yt <LINK>`
 * SYNTAXCHECK
   - this script finds the true writing of a word. this code belongs to Peter Nolvig. i just added sys.argv
+* MDREADER
+  - a small script to visualize .md files in terminal
   
 # Anything to do before using?
 You need to change the profile path in giox.py to use giox                                                                          
