@@ -69,8 +69,7 @@ Plugin 'tpope/vim-surround'                 "editing brackets <cs{[ ysiw'>
 Plugin 'MarcWeber/vim-addon-mw-utils'       "vim snipmate dependency
 Plugin 'tomtom/tlib_vim'                    "vim snipmate dependency
 Plugin 'garbas/vim-snipmate'                "enables snippets
-Plugin 'pangloss/vim-javascript'            "javascript indentation&syntax support
-Plugin 'Xuyuanp/nerdtree-git-plugin'  "what you have edited since last commit
+Plugin 'Xuyuanp/nerdtree-git-plugin'        "what you have edited since last commit
 
 call vundle#end()
 filetype plugin indent on
