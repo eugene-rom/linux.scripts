@@ -6,7 +6,6 @@ I am going to share some small scripts/config files I use in my daily life.
   * BASHRC
     - mkcd function      :  creates a folder and gets into it.
     - lastedited function:  gets into the last edited folder inside a folder.
-    - checktext function :  checks a text for duplicates and clears them after backing up the original file.
     - scripts function   :  gets into ~/Documents/script/[$1 if specified]
     - changes the terminal title to USERNAME@HOSTNAME: PWD when there isn't any commands running.
     - changes the terminal title to PWD:{COMMAND} when there is a command running.
