@@ -11,21 +11,8 @@ I am going to share some small scripts/config files I use in my daily life.
     - changes the terminal title to PWD:{COMMAND} when there is a command running.
     - PS1= [RED]user@host[BLUE]: PWD[NORMAL]$
   * VIMRC
-    - tabstop is 4 and tabs are spaces.
-    - folding is enabled and <z> opens/closes folds.
-    - <leader> is <,>
-    - shows unwanted/trailing whitespace
-    - sets a line to column 100
-    - <leader>q to turn off search highlight
-    - <F4> to remove all unwanted/trailing whitespace
-    - <leader>u to open Gundo(super undo mode)
-    - <C-n> to open NERDTree
-    - NERDTree closes after opening a file
-    - <'> and <;> expands and shrinks the visual mode selection(vim-expand-region)
-    - press c two times quickly to exit/enter insert mode.
-    - cs'" to change 'berk' to "berk" (vim-surround)
-    - <leader>cc to uncomment the line/block. (nerdcommenter) (usable with vim-expand-region)
-    - colorscheme is badwolf from github.com/sjl/badwolf
+    - my personal settings. nothing recommended.
+    - comments explain everything.
     ------------------------------                                                                                                                                    
 * SCRIPTS
   * NO-SPACE-BLANK
