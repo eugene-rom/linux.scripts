@@ -6,12 +6,26 @@ I am going to share some small scripts/config files I use in my daily life.
   * BASHRC
     - mkcd function      :  creates a folder and gets into it.
     - lastedited function:  gets into the last edited folder inside a folder.
-    - scripts function   :  gets into ~/Documents/script/[$1 if specified]
+    - getin function:    :  gets into the $1 and $2 if specified
     - changes the terminal title to USERNAME@HOSTNAME: PWD when there isn't any commands running.
     - changes the terminal title to PWD:{COMMAND} when there is a command running.
-    - PS1= user@host: PWD$
+    - PS1= [RED]user@host[BLUE]: PWD[NORMAL]$
   * VIMRC
-    - my personal settings nothing recommended. good for Python3 coding.
+    - tabstop is 4 and tabs are spaces.
+    - folding is enabled and <z> opens/closes folds.
+    - <leader> is <,>
+    - shows unwanted/trailing whitespace
+    - sets a line to column 100
+    - <leader>q to turn off search highlight
+    - <F4> to remove all unwanted/trailing whitespace
+    - <leader>u to open Gundo(super undo mode)
+    - <C-n> to open NERDTree
+    - NERDTree closes after opening a file
+    - <'> and <;> expands and shrinks the visual mode selection(vim-expand-region)
+    - press c two times quickly to exit/enter insert mode.
+    - cs'" to change 'berk' to "berk" (vim-surround)
+    - <leader>cc to uncomment the line/block. (nerdcommenter) (usable with vim-expand-region)
+    - colorscheme is badwolf from github.com/sjl/badwolf
     ------------------------------                                                                                                                                    
 * SCRIPTS
   * NO-SPACE-BLANK
