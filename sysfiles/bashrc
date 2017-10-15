@@ -23,13 +23,6 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-#shopt -s globstar
-
-# make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
@@ -93,17 +86,14 @@ function mkcd {
 function lastedited {
     cd "$1"; cd $(ls -1tb | head -n1); }
 
-#gets into the ~/Documents/scripts/[$1 if specified]
-function scripts {
-    cd ~/Documents/scripts
-    if [ ! -z $1 ]; then
-        cd $1; 
-    fi; }
+#gets into the ~/<FOLDER>/<$1>
+function getin {
+    if [ ! -z $2 ]; then cd $1 && cd $2; else cd $1; fi; }
 
 #aliases
 alias giox='python3 ~/Documents/scripts/giox/giox.py'
 alias syntaxcheck='python3 ~/Documents/scripts/syntaxcheck.py'
-alias docs='cd ~/Documents'
+alias docs='getin ~/Documents'
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
