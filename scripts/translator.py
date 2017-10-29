@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+## coded by Berk Küzgil at 29x17:14.10
+## berkkuzgil@protonmail.com for contact
+
 #for get_word()
 import pyperclip, time
 #for keypress_checker()
