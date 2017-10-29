@@ -13,7 +13,7 @@ import googletrans, os
 def keypress_checker():
     tty.setraw(sys.stdin)
     x = 0
-    while x != chr(96): # ESC
+    while x != chr(96):
         x=sys.stdin.read(1)[0]
     else:
         pass
