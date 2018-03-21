@@ -1,4 +1,4 @@
-// This extension is a super ugly hack, because extensions are supposed to be
+// This extension is a super ugly hack, because extensions are supposed to be disabled
 // when the lock screen gets shown. Since doing this would completely defeat the
 // purpose of this extension, it has to break with this assumption
 const ScreenShield = imports.ui.screenShield;
@@ -38,7 +38,7 @@ function enable() {
 function disable() {
     // Only allow disabling the extension when in 'user' mode (i.e. manually),
     // but not in lock-screen mode.
-    if (extensionActive && Main.sessionMode.currentMode == 'user') {
+    if (extensionActive && Main.sessionMode.currentMode != 'unlock-dialog') {
         extensionActive = false;
         ScreenShield.ScreenShield.prototype._activateFade = orig_activateFade;
         ScreenShield.ScreenShield.prototype._completeLockScreenShown = orig_completeLockScreenShown;
